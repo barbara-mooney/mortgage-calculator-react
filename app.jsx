@@ -28,7 +28,7 @@ export default class App extends React.Component {
       const n = Number(this.state.term) * 12;
       const monthlyPymt = (p * r*(Math.pow((1+r), n)) / (Math.pow((1+r), n) -1)).toFixed(2);
       this.setState({
-        output: "$" + monthlyPymt + " is your payment",
+        output: `$${monthlyPymt} is your payment`,
       })
     }
   
@@ -72,7 +72,7 @@ export default class App extends React.Component {
             <div className="form-group">
               <div className="col-sm-offset-2 col-sm-10">
                 <button 
-                  name="button"
+                  name="submit"
                   type="button" 
                   className="btn btn-default"
                   onClick={this.calculatePayment}
